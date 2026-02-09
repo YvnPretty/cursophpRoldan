@@ -9,10 +9,21 @@ try {
 
 
 try {
-$a = 10;
-$b = 0;
-if($b=== 0){
-}throw new Exception("no se puede divir entre cero");
+    $a = 10;
+    $b = 0;
+
+    if ($b === 0) {
+        throw new Exception("No se puede dividir entre cero");
+    }
+
+    $resultado = $a / $b;
+    echo "Resultado: " . $resultado;
+
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+
+} finally {
+    echo "<br>Proceso finalizado.";
 }
 
 
